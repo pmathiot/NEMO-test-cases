@@ -67,5 +67,5 @@ Output files : <br>
 * Available notebook python is **[here](https://github.com/pmathiot/NEMO-test-cases/tree/master/isomip/notebook/isomip_notebook.ipynb)**.
 
 ## References
-Losch, M., 2008: Modeling ice shelf cavities in a z coordinate ocean general circulation model, J. Geophys. Res.-Oceans, 113, C08043.
+Losch, M., 2008: Modeling ice shelf cavities in a z coordinate ocean general circulation model, J. Geophys. Res.-Oceans, 113, C08043.<br>
 Mathiot, P., Jenkins, A., Harris, C., and Madec, G., 2017: Explicit representation and parametrised impacts of under ice shelf seas in the z* coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10, 2849-2874.

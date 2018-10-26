@@ -27,9 +27,7 @@ choice of..... is done in namtra_.... block of namelist:
 !-----------------------------------------------------------------------
 
 ~~~
-
 Run the executable (here on a 36 cores node) : (if you haven't compiled NEMO see [here](https://github.com/sflavoni/NEMO-test-cases) )
-
 ``` 
 aprun -b  -n 36 -N 36 ./nemo
 ```
@@ -39,38 +37,14 @@ ISOMIP_1m_00010101_00301231_grid_T.nc
 ISOMIP_1m_00010101_00301231_grid_U.nc
 ISOMIP_1m_00010101_00301231_grid_V.nc
 ```
+Compile REBUILD_NEMO:
+```
+./maketools -n REBUILD_NEMO -m arch_name_used_during_nemo_compilation
+```
 Rebuild the mesh mask: <br>
 ```
 tools/REBUILD_NEMO/rebuild_nemo -d 1 mesh_mask 36
 ```
-~~~
-
-~~~
-
-* The **Sensibility Simulation** : .
-
-
-```
-ln -sf namelist_xxxx_cfg namelist_cfg
-```
-
-Run the executable again : 
-
-``` 
- mpirun -np 1 ./opa 
-```
-
-Output files : <br>
-
-~~~
-
-~~~
-
-* You can change output file name  in variable @expname@ in file\_def\_nemo-opa.xml
-
-~~~xml
-<file_definition type="multiple_file" name="@expname@" sync_freq="10d" min_digits="4">
-~~~
 
 * Available notebook python is **[here](https://github.com/pmathiot/NEMO-test-cases/tree/master/isomip/notebook/isomip_notebook.ipynb)**.
 

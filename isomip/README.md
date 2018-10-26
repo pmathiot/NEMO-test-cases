@@ -28,13 +28,21 @@ choice of..... is done in namtra_.... block of namelist:
 
 ~~~
 
-Run the executable : (if you haven't compiled NEMO see [here](https://github.com/sflavoni/NEMO-test-cases) )
+Run the executable (here on a 36 cores node) : (if you haven't compiled NEMO see [here](https://github.com/sflavoni/NEMO-test-cases) )
 
 ``` 
- mpirun -np 1 ./opa 
+aprun -b  -n 36 -N 36 ./nemo
 ```
 Output files are: <br>
-
+```
+ISOMIP_1m_00010101_00301231_grid_T.nc
+ISOMIP_1m_00010101_00301231_grid_U.nc
+ISOMIP_1m_00010101_00301231_grid_V.nc
+```
+Rebuild the mesh mask: <br>
+```
+tools/REBUILD_NEMO/rebuild_nemo -d 1 mesh_mask 36
+```
 ~~~
 
 ~~~
